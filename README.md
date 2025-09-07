@@ -1,8 +1,9 @@
 # Narcisissitic Twitter
 
-## Project goals
+## Project outline
 
-Create a model that can predict the narcissism of the person based on their tweets. The project uses data that distinguishes between two-factor Narcissism - Admiration (ADM) and Rivary (RIV). Each factor is calculated from the average of nine responses to statements about narcissism, to which the respondent answers on a scale of 1-6 (from strongly disagree to strongly agree).
+This study investigates the use of Natural Language Processing (NLP) techniques to assess narcissistic traits in social media content, addressing a gap in scalable tools for psychological analysis of people’s behavior on social networking sites. Specifically, it focuses on grandiose narcissism, measured through the dimensions of admiration and rivalry from the Narcissistic Admiration and Rivalry Questionnaire (NARQ). Two regression-based NLP approaches are implemented: a few-shot model using GPT and a fine-tuned BERT model with a regression head. The study uses a new dataset (N=501) and investigates how well narcissistic traits can be discerned from posts on different topics: travel, abortion, and artificial intelligence. Model performance is evaluated against tree baselines: statistical, scores provided by a psychologist and a traditional bag-of-words model. The findings demonstrate the viability of large language models for detecting narcissistic traits in short text, especially highlighting the limitations of even the latest models, when the dataset is small and showing further research directions. Furthermore, we analyzed verbal intelligence and the positive and negative emotional affect of those posts using the zero-shot method. The comparison between those traits and narcissism showed that admiration is correlated with positive emotional affect and inversely correlated with negative emotional affect. The strength of this effect varied between the post types. Finally, verbal intelligence was correlated with negative emotional affect and was inversely
+correlated with positive emotional affect. This finding shows both the potential and limitations of the state-of-the-art machine learning methods used for psychological studies.
 
 ## Train and test models
 The repository is inspired by [lightning-hydra-template](https://github.com/ashleve/lightning-hydra-template). To train a model one should use `python train_lightning.py experiment=bert` (lightning models) or `train.py experiment=baseline` (other models). An experiment should be defined in `configs/experiments`, where one should make necessary overrides.
@@ -118,3 +119,8 @@ Hydra is a framework for elegantly configuring complex applications. It is very 
 It could be used for example to run multiple experiments with different parameters like learning rate.
 
 It is recommended to read [the article written by Hydra author](https://medium.com/pytorch/hydra-a-fresh-look-at-configuration-for-machine-learning-projects-50583186b710).
+
+
+## Results
+
+Final datasets can be found in ```data\processed\final_results_wide.csv``` or ```data\processed\final_results.csv```. The jupyter nootebook that has final correlation and ICC calculated can be found under ```notebooks\full_data_correlation.ipnyb```.
