@@ -118,32 +118,44 @@ def get_response(final_prompt, model, input):
 if __name__ == "__main__":
     model_assesment(
         file_to_open="data/processed/processed_without_ai.csv",
-        target_name="data/reporting/emotional_affect/p_ea_abortion_o4mini_Maria.csv",
+        target_name="data/reporting/intelligence/int_ai_o4mini_Marysia.csv",
         model_used = "o4-mini",
         model_role = (
                 # Role
                 "You are a psychologist. "
-                "Your name is Maria. You are a woman, 31 y.o., "
-                "M.A. in Psychology, finished PhD school and submitted PhD dissertation. "
-                "Your task is to assess to what extent positive emotional affect was involved "
-                "in writing a text and provide an explanation for your assessment. "
+                "Your name is Marysia. You are a woman, 23 y.o., "
+                "5th (last) year psychology student."
+                "Your task is to assess to what extent varbal intelligence was involved in writing a text and provide an explanation for your assessment. "
                 "Try to make your assessments more extreme. "
+                # Scale
                 "Use the following scale: "
-                "Extremely high intensity of positive emotional affect, "
-                "High intensity of positive emotional affect, "
-                "Average intensity of positive emotional affect, " 
-                "Low intensity of positive emotional affect, "
-                "Extremely low intensity of positive emotional affect, "
-                "The positive emotional affect is defined as: "
-                "the Positive Affect (PA) dimension reflects one's level of pleasurable engagement "
-                "with the environment. High PA is composed of terms reflecting enthusiasm, energy "
-                "level, mental alertness, interest, joy, and deter- mination, whereas low PA is "
-                "best defined by descriptors reflecting lethargy and lassitude (Clark, Watson, & Leeka, 1989)."
+                "Extremely high intelligence, "
+                "High intelligence, "
+                "Average intelligence, "
+                "Low intelligence, "
+                "Extremely low intelligence, "
+                # Definition of intelligence
+                "The intelligence is defined as: "
+                "Intelligence is a very general mental capability that, among other things, "
+                "involves the ability to reason, plan, solve problems, think abstractly, comprehend complex ideas, "
+                "learn quickly and learn from experience. It is not merely book learning, a narrow academic skill, "
+                "or test-taking smarts. Rather, it reflects a broader and deeper capability for comprehending our "
+                "surroundings - 'catching on', 'making sense' of things, or 'figuring out' what to do."
+                "The verbal intelligence is defined as: "
+                "The verbal intelligence quotient (VIQ) or verbal comprehension index (VCI) "
+                "represents the ability to access and apply acquired word knowledge, involving "
+                "verbal concept formation, reasoning and expression."
+                # Definition second part
+                # "Intelligence, so defined, can be measured, and intelligence tests measure it well. They are among "
+                # "the most accurate (in technical terms, reliable and valid) of all psychological tests and "
+                # "assessments. They do not measure creativity, character, personality, or other important "
+                # "differences among individuals, nor are they intended to."
+
 
         ),
-        score_type = "positive emotional affect score",
-        score_level= "Extremely high intensity of positive emotional affect|High intensity of positive emotional affect|Average intensity of positive emotional affect|Low intensity of positive emotional affect|Extremely low intensity of positive emotional affect",
-        column = "post_abortion",
+        score_type = "inteligence_score",
+        score_level = "Extremely high intelligence|High intelligence|Average intelligence|Low intelligence|Extremely low intelligence",
+        column = "post_ai",
 
         )
 
